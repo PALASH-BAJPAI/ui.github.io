@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>UI DESIGNS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="vendors/easings.min.js"></script>
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="fullpage.js"></script>
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+
+
+</head>
+
+<body>
+
+    <div class="container" id="fullpage">
+        <div class="section">
+            <div class="typing-slider">
+                <p>UI DESIGNS</p>
+                <p>By PALASH BAJPAI</p>
+                <p>scroll down</p>
+            </div>
+        </div>
+
+        <div class="section"><img src="images/Sting.png"></div>
+        <div class="section"><img src="images/detox.png"></div>
+        <div class="section"><img src="images/Monochrome.png"></div>
+        <div class="section"><img src="images/shapes.png"></div>
+        <div class="section"><img src="images/fashion.png"></div>
+        <div class="section"><img src="images/SUSHI.png"></div>
+        <div class="section"><img src="images/games.png"></div>
+        <div class="section"><img src="images/trash.png"></div>
+        <div class="section"><img src="images/vr.png"></div>
+        <div class="section"><img src="images/UI DESIGN 1 copy.png"></div>
+        <div class="section">
+            <div class="slide" data-anchor="slide1"><img src="images/upwork.PNG"></div>
+            <div class="slide" data-anchor="slide2"><img src="images/design 3.png"></div>
+            <div class="slide" data-anchor="slide2"><img src="images/ROYAL.png"></div>
+            <div class="slide" data-anchor="slide2"><img src="images/CLICK.png"></div>
+            <div class="slide" data-anchor="slide2"><img src="images/design4.png"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- FULLPAGE.JS SCRIPT -->
+    <script>
+        new fullpage('#fullpage', {});
+        sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+            //adding the action to the button
+            $(document).on('click', '#moveUp', function() {
+                fullpage_api.moveSectionUp();
+            });
+    </script>
+
+    <!-- GRADE.JS SCRIPT, USE WITH LIVE SERVER -->
+    <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            /*
+                A NodeList of all your image containers (Or a single Node).
+                The library will locate an <img /> within each
+                container to create the gradient from.
+             */
+            Grade(document.querySelectorAll('.section'))
+        })
+    </script>
+</body>
+
+</html>
